@@ -35,8 +35,8 @@ module.exports.registerUser = async function (req, res) {
 
         // Generate a token for the user
         const token = generateToken(user);
+        res.redirect("/shop");
 
-        res.status(201).json({ success: true, user: userWithoutPassword, token });
     } catch (error) {
         res.status(500).json({ success: false, message: error.message });
     }
@@ -64,6 +64,6 @@ res.cookie("token",token,{
      secure:true
     });
 
-res.status(200).json({success:true,token});
+    res.redirect("/shop");
 
 }

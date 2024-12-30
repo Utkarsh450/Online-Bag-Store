@@ -25,7 +25,7 @@ const adminSchema = mongoose.Schema({
         default: 'default_admin.jpg'
     },
     gstin:{
-        typr:String,
+        type: String,
     }
 })
 

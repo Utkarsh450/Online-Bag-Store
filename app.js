@@ -26,7 +26,7 @@ app.use(expressSession({
 }))
 app.use(express.static(path.join(__dirname,'public')));
 app.use("/",mainRouter);
-app.use("/admin",adminRouter);
+app.use("/owners",adminRouter);
 app.use("/users",userRouter);
 app.use("/products",productsRouter);
 

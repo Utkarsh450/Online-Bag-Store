@@ -67,3 +67,8 @@ res.cookie("token",token,{
     res.redirect("/shop");
 
 }
+
+module.exports.logoutUser = async (req,res)=>{
+    res.cookie("token","");
+    res.redirect("/");
+}
